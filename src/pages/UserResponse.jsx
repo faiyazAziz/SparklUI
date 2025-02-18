@@ -9,7 +9,7 @@ const UserResponse = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/quizzes/${quizId}/response/${participantId}/`, {
+    fetch(`https://sparklquiz.onrender.com/api/quizzes/${quizId}/response/${participantId}/`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("access-token")}` },
     })
       .then((res) => res.json())

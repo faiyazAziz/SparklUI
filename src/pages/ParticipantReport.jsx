@@ -8,7 +8,7 @@ const ParticipantReport = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/quizzes/${quizId}/participants/`, {
+    fetch(`https://sparklquiz.onrender.com/api/quizzes/${quizId}/participants/`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("access-token")}` },
     })
       .then((res) => {

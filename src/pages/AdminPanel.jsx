@@ -9,7 +9,7 @@ const AdminPanel = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/quizzes/", {
+    fetch("https://sparklquiz.onrender.com/api/quizzes/", {
       headers: { Authorization: `Bearer ${localStorage.getItem("access-token")}` },
     })
       .then((res) => res.json())
@@ -19,7 +19,7 @@ const AdminPanel = () => {
 
   const handleCreateQuiz = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8000/api/quizzes/", {
+    const response = await fetch("https://sparklquiz.onrender.com/api/quizzes/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -41,7 +41,7 @@ const AdminPanel = () => {
   const handleDeleteQuiz = async (id) => {
     if (!window.confirm("Are you sure you want to delete this quiz?")) return;
 
-    const response = await fetch(`http://localhost:8000/api/quizzes/${id}/`, {
+    const response = await fetch(`https://sparklquiz.onrender.com/api/quizzes/${id}/`, {
       method: "DELETE",
       headers: { Authorization: `Bearer ${localStorage.getItem("access-token")}` },
     });

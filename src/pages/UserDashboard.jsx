@@ -5,7 +5,7 @@ const UserDashboard = () => {
   const [quizzes, setQuizzes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/my-quizzes/", {
+    fetch("https://sparklquiz.onrender.com/api/my-quizzes/", {
       headers: { Authorization: `Bearer ${localStorage.getItem("access-token")}` },
     })
       .then((res) => res.json())

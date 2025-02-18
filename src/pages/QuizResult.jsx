@@ -11,7 +11,7 @@ const QuizResult = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/my-quizzes/${id}/response/`, {
+    fetch(`https://sparklquiz.onrender.com/api/my-quizzes/${id}/response/`, {
       headers: { Authorization: `Bearer ${localStorage.getItem("access-token")}` },
     })
       .then((res) => {

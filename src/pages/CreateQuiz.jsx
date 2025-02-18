@@ -15,7 +15,7 @@ const CreateQuiz = () => {
   const handleCreateQuiz = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:8000/api/quizzes/", {
+    const response = await fetch("https://sparklquiz.onrender.com/api/quizzes/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

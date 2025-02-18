@@ -14,7 +14,7 @@ const AddQuestion = () => {
 
   useEffect(() => {
     const fetchQuizDetails = async () => {
-      const response = await fetch(`http://localhost:8000/api/quizzes/${quizId}/`, {
+      const response = await fetch(`https://sparklquiz.onrender.com/api/quizzes/${quizId}/`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("access-token")}`,
         },
@@ -62,7 +62,7 @@ const AddQuestion = () => {
     updatedQuestions[currentQuestionIndex] = questionData;
     setQuestions(updatedQuestions);
 
-    const response = await fetch(`http://localhost:8000/api/quizzes/${quizId}/add_question/`, {
+    const response = await fetch(`https://sparklquiz.onrender.com/api/quizzes/${quizId}/add_question/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

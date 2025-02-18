@@ -13,7 +13,7 @@ const QuizAttempt = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/my-quizzes/${id}/start/`, {
+    fetch(`https://sparklquiz.onrender.com/api/my-quizzes/${id}/start/`, {
       method: "POST",
       headers: { Authorization: `Bearer ${localStorage.getItem("access-token")}` },
     })
@@ -47,7 +47,7 @@ const QuizAttempt = () => {
   };
 
   const handleSubmit = async () => {
-    const response = await fetch(`http://localhost:8000/api/my-quizzes/${quiz.attempt_id}/submit/`, {
+    const response = await fetch(`https://sparklquiz.onrender.com/api/my-quizzes/${quiz.attempt_id}/submit/`, {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${localStorage.getItem("access-token")}` },
       body: JSON.stringify({ responses }),

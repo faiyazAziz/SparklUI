@@ -37,7 +37,7 @@ const Register = () => {
     try {
       console.log(formData);
       
-      const response = await fetch("http://localhost:8000/api/register/", {
+      const response = await fetch("https://sparklquiz.onrender.com/api/register/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password, password2, is_admin }),
@@ -124,7 +124,7 @@ const Register = () => {
           </button>
         </form>
         <p className="text-center mt-3">
-          Already have an account? <Link href="/login">Login</Link>
+          Already have an account? <Link to='/login'>Login</Link>
         </p>
       </div>
     </div>
