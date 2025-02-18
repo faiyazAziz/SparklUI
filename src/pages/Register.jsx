@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { showSnackbar } from "../redux/snackbarSlice";
 import { loginSuccess } from "../redux/userSlice";
 import Logo from '../assets/download-removebg-preview.png';
@@ -124,7 +124,7 @@ const Register = () => {
           </button>
         </form>
         <p className="text-center mt-3">
-          Already have an account? <a href="/login">Login</a>
+          Already have an account? <Link href="/login">Login</Link>
         </p>
       </div>
     </div>
