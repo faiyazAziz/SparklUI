@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { loginSuccess } from "../redux/userSlice";
 import { showSnackbar } from "../redux/snackbarSlice";
 import Logo from '../assets/download-removebg-preview.png'
@@ -75,7 +75,7 @@ const Login = () => {
         </form>
         <div>
           <p className="text-center mt-3">
-            Don't have an account? <a href="/register">Sign Up</a>
+            Don't have an account? <Link to="/register">Sign Up</Link>
           </p>
         </div>
       </div>
